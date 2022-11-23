@@ -5,6 +5,8 @@ services:
       context: ./backend/
       dockerfile: Dockerfile
     image: backend
+    env_file:
+      - .env
     depends_on:
       - database    
     container_name: kpd-backend
